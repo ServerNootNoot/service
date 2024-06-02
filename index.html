@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nightshade Network | Support & More</title>
+  <title>Weaknesses of Nightshade</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -30,9 +30,9 @@
 
   <script>
     const redirectUrl = 'https://discord.gg/ugNMC9e4E6';
-    const redirectTime = 15; // seconds
+    let redirectTime = 15;
 
-    let countdownInterval = setInterval(() => {
+    const countdownInterval = setInterval(() => {
       const redirectMessage = document.getElementById('redirect-message');
       if (redirectTime > 0) {
         redirectMessage.textContent = `Redirecting in ${redirectTime} seconds...`;
