@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nightshade Network | Support & More</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    #redirect-message {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Nightshade Network | Support & More</h1>
+  <p>You will be redirected to the Discord server invite in 15 seconds.</p>
+  <div id="redirect-message"></div>
+
+  <script>
+    const redirectUrl = 'https://discord.gg/ugNMC9e4E6';
+    const redirectTime = 15; // seconds
+
+    let countdownInterval = setInterval(() => {
+      const redirectMessage = document.getElementById('redirect-message');
+      if (redirectTime > 0) {
+        redirectMessage.textContent = `Redirecting in ${redirectTime} seconds...`;
+        redirectTime--;
+      } else {
+        clearInterval(countdownInterval);
+        window.location.href = redirectUrl;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
